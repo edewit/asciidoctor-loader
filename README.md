@@ -2,14 +2,14 @@
 
 ## Installation
 
-`npm install asciidoctor-loader --save-dev`
+`npm install asciidoctorindex-loader --save-dev`
 
 ## Usage
 
 [Documentation: Using loaders](http://webpack.github.io/docs/using-loaders.html)
 
 ``` javascript
-var readme = require('html!asciidoctor!./README.adoc');
+var readme = require('asciidoctor!./README.adoc');
 // => returns parsed file content
 ```
 
@@ -22,7 +22,7 @@ This webpack config can load asciidoctor files.
 module.exports = {
   module: {
     loaders: [
-      { test: /\.adoc$/, loader: "html!asciidoctor" }
+      { test: /\.adoc$/, loader: "asciidoctor" }
     ]
   }
 };

@@ -1,14 +1,14 @@
 {
-  "name": "asciidoctor-loader",
+  "name": "asciidoctorindex-loader",
   "version": "0.1.1",
-  "description": "asciidoctor-loader for webpack",
+  "description": "asciidoctorindex-loader for webpack",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/exaptis/asciidoctor-loader"
+    "url": "https://github.com/edewit/asciidoctor-loader"
   },
   "keywords": [
     "webpack",
@@ -16,12 +16,12 @@
     "asciidoctor",
     "markdown"
   ],
-  "author": "David Loidolt <david@loidolt.at>",
+  "author": "Erik Jan de Wit <edewit@redhat.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/exaptis/asciidoctor-loader/issues"
+    "url": "https://github.com/edewit/asciidoctor-loader/issues"
   },
-  "homepage": "https://github.com/exaptis/asciidoctor-loader",
+  "homepage": "https://github.com/edewit/asciidoctor-loader",
   "dependencies": {
     "asciidoctor.js": "1.5.5-4",
     "html-loader": "^0.4.3",

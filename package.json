@@ -26,6 +26,7 @@
     "asciidoctor.js": "1.5.5-4",
     "html-loader": "^0.4.3",
     "loader-utils": "~0.2.15",
-    "object-assign": "~4.1.0"
+    "object-assign": "~4.1.0",
+    "sync-request": "^4.0.2"
   }
 }

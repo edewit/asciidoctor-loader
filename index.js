@@ -7,6 +7,7 @@ var requestSync = require("sync-request");
 
 // default option
 var defaultOptions = {
+  safe: 'unsafe',
   sourceHighlighter: 'highlightjs'
 };
 

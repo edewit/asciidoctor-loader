@@ -26,10 +26,19 @@ module.exports = function (content) {
   for (var k in content) {
     if (content.hasOwnProperty(k)) {
       let url = content[k];
-      var res = requestSync('GET', url);
-      var rawContent = res.getBody('utf8');
+      var rawContent = "";
+      try {
+        var res = requestSync('GET', url);
+        rawContent = res.getBody('utf8');
+      } catch (e) {
+        throw new Error('Could not fetch asciidoc for url: ' + url);
+      }
 
-      var doc = asciidoctor.convert(rawContent, options);
+      var attributes = "";
+      if (options['document-attributes'] !== null) {
+        attributes = requestSync('GET', options['document-attributes']).getBody('utf8');
+      }
+      var doc = asciidoctor.convert(attributes + rawContent, options);
       content[k] = doc;
     }
   }

@@ -38,8 +38,13 @@ module.exports = function (content) {
       if (options['document-attributes'] !== null) {
         attributes = requestSync('GET', options['document-attributes']).getBody('utf8');
       }
-      var doc = asciidoctor.convert(attributes + rawContent, options);
-      content[k] = doc;
+      if (options['plain'] === true) {
+        content[k] = rawContent;
+        content['document-attributes'] = attributes;
+      } else {
+        var doc = asciidoctor.convert(attributes + rawContent, options);
+        content[k] = doc;
+      }
     }
   }
 
